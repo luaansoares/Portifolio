@@ -1,0 +1,275 @@
+@charset "utf-8";
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Quicksand:wght@300..700&family=Righteous&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root{
+    --fonth1: 'Righteous';
+    --fontp: 'Plus Jakarta Sans';
+
+    --cor01: black;
+    --cor02: #aaa3a3;
+    --cor03: #837e7e;
+    --cor04: #732F61;
+    --cor05: #ffffff34;
+    --cor06: #ffff;
+    --cor07: #ff574b;
+
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+
+}
+body{
+    background-color: var(--cor01);
+}
+
+header{
+    display: flex;
+    position: sticky;
+    top: -8px;
+    z-index: 10;
+    background-color: #00000061;
+    backdrop-filter: blur(2px);
+    width: 92,5%;
+    
+    padding: 50px;
+}
+
+header > nav {
+    margin: auto;
+}
+
+header > nav > a {
+    font-weight: bold;
+    margin: 30px;
+    color: #732F61;
+    font-family: var(--fontp);
+    text-decoration: none;
+}
+
+#topo {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+    height: 70vh;
+    width: 95vw;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+div#foto > img{
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+#digitacao {
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    width: 0;
+    animation: typing 5s steps(30, end) forwards;     display: inline-block;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;    }
+}
+
+#cursor {
+    display: inline-block;
+    border-right: 3px solid;
+    color: var(--cor04);
+    animation: blink 0.5s step-end infinite alternate;
+}
+
+@keyframes blink {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: black;
+    }
+}
+
+
+
+
+h1 {
+    text-align: justify;
+    font-family: var(--fonth1);
+    color: var(--cor02);
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#linha {
+    display: block;
+    margin-bottom: 20px;
+    
+}
+
+.cor{
+    color: #732F61;
+}
+
+#eu {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+    height: 100vh;
+    width: 95vw;
+    margin-left: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+#eu > #eufoto > img {
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+
+
+#redes a i {
+    color: white;
+    transition: 0.3s;
+    transform: 0.3s;
+}
+
+#insta i:hover  {
+    color: var(--cor07);
+
+}
+
+
+
+#dados {
+    font-family: var(--fontp);
+    width: 600px;
+    height: 250px;
+    
+    color: #837e7e;
+    
+    font-size: 1.1em;
+    font-weight: bolder;
+}
+
+#dados ul {
+    margin-top: 50px;
+    
+    list-style-type: none;
+    columns: 2;
+    column-gap: 20px;
+    
+}
+
+.bran {
+    color: #ffff;
+}
+
+.cinza {
+    color: #837e7e;
+}
+
+
+
+
+
+div#des > p {
+    font-family: var(--fontp);
+    color: var(--cor02);
+    margin-bottom: 10px;
+    font-weight: bold;
+    
+}
+
+p > a {
+    color: #ffff;
+    font-size: 25px;
+    margin-right: 20px;
+    
+}
+
+
+
+
+section#ling  {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-color: #aaa3a39d;
+}
+
+.logo{ 
+    cursor: pointer;
+    height: 100px;
+}
+
+#mim  h1 {
+    display: block;
+    text-align: center;
+    width: 98vw;
+}
+
+#pfortes  {
+    margin-top: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+    
+}
+#pfortes h1 {
+    text-align: center;
+}
+
+#pfortes div {
+    
+    text-justify: auto;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+
+#pfortes div > h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+#pfortes div > p {
+    
+    
+    padding: 5px;
+    text-align: justify;
+    color: var(--cor02);
+    font-family: var(--fontp);
+}
+
+footer{
+    text-align: center;
+    font-family: var(--fontp);
+    margin-top: 100px;
+    padding: 10px;
+    background-color: var(--cor03);
+}
